@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/baseline_account_circle_24" />
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="@string/choose_item_to_rest"
+                android:textSize="30sp" />
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search items" />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:divider="#000"
+                android:dividerHeight="1dp" />
+
+            <TextView
+                android:id="@+id/rented"
+                style="@style/TextViewStyle"
+                android:text=""
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <Button
+                    android:id="@+id/startDate"
+                    android:layout_marginEnd="20dp"
+                    style="@style/buttons"
+                    android:text="@string/start_date" />
+
+                <Button
+                    android:id="@+id/endDate"
+                    style="@style/buttons"
+                    android:text="@string/end_date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/renting"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    style="@style/buttons"
+                    android:text="@string/rent" />
+
+                <Button
+                    android:id="@+id/list"
+                    android:layout_marginTop="20dp"
+                    style="@style/buttons"
+                    android:text="@string/see_your_list"/>
+
+                <Button
+                    android:id="@+id/logOut2"
+                    style="@style/buttons"
+                    android:text="@string/log_out"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

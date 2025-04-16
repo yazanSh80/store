@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/baseline_account_circle_24" />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/TextViewStyle"
+                android:text="@string/welcome" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/TextViewStyle"
+                android:text="@string/want_to_buy" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/TextViewStyle"
+                android:text="@string/chooseCategory" />
+
+            <Spinner
+                android:id="@+id/SpinnerCategory"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#FFFFFF"
+                android:textAlignment="center" />
+
+            <Switch
+                android:id="@+id/switchMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:showText="true"
+                android:textOff="@string/buy"
+                android:textOn="@string/rent"
+                android:textSize="70sp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Button
+                android:id="@+id/btn_action"
+                style="@style/buttons"
+                android:text="@string/proceed" />
+
+            <TextView
+                android:id="@+id/sell"
+                style="@style/TextViewStyle"
+                android:text="@string/if_you_want_to_sell_items_click_here" />
+
+            <Button
+                android:id="@+id/insertItems"
+                style="@style/buttons"
+                android:layout_margin="20dp"
+                android:text="@string/insert_items" />
+            <Button
+                style="@style/buttons"
+                android:text="@string/log_out"
+                android:id="@+id/logOut1"
+
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
